@@ -9,11 +9,11 @@ body, html {
 .signup,
 .signin {
     margin-top: 50px;
-    margin-left: 10%;
+    margin-left: 25%;
     padding: 10px;       
     border-radius:4px;
     background-color: rgb(32, 29, 29);
-    width: 80%;
+    width: 50%;
     border: 1px solid white;
 }
 
