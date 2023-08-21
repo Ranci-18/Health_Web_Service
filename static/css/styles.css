@@ -1,0 +1,17 @@
+.signup,
+.signin {
+    margin-top: 50px;
+    margin-left: 10%;
+    padding: 10px;       
+    border-radius:4px;
+    background-color: grey;
+    width: 80%;
+    border: 1px solid white;
+}
+
+body, html {
+    background-color: navy-blue;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
