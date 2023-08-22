@@ -5,9 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Web Service</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesindex.css') }}">
+    <link rel="icon" href="../static/images/medinfoimg.png">
 </head>
 <body>
-    
+  <div class="header">
+    <img src="../static/images/medinfoimg.png" alt="Logo" class="logo">
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Tell us which ailment you'd like to know about...">
+      <button class="search-button">Search</button>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <p class="huge-text">Get Medical Information from the touch of a button</p>
+    <div class="search-bar-below">
+      <input type="text" class="search-input-below" placeholder="Search...">
+      <button class="search-button-below">Search</button>
+    </div>
+  </div>
 </body>
 </html>
