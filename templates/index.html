@@ -1,16 +1,15 @@
-<!-- landing page html content -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Web Service</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesindex.css') }}">
-    <link rel="icon" href="../static/images/medinfoimg.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesindex.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='images/medinfo.png') }}">
+<link rel="icon" href="{{ url_for('static', filename='images/medinfo.png') }}">
 </head>
 <body>
   <div class="header">
-    <img src="../static/images/medinfoimg.png" alt="Logo" class="logo">
+    <img src="{{ url_for('static', filename='images/medinfo.png') }}" alt="Logo" class="logo">
     <div class="search-bar">
       <input type="text" class="search-input" placeholder="Tell us which ailment you'd like to know about...">
       <button class="search-button">Search</button>
@@ -18,7 +17,7 @@
   </div>
   <div class="content-wrapper">
     <p class="huge-text">Get Medical Information from the touch of a button</p>
+
   </div>
-  <script src="../static/js/search.js"></script>
 </body>
 </html>
