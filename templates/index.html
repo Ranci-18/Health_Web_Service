@@ -1,24 +1,64 @@
-<!-- landing page html content -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Web Service</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesindex.css') }}">
-    <link rel="icon" href="../static/images/medinfoimg.png">
-</head>
-<body>
-  <div class="header">
-    <img src="../static/images/medinfoimg.png" alt="Logo" class="logo">
-    <div class="search-bar">
-      <input type="text" class="search-input" placeholder="Tell us which ailment you'd like to know about...">
-      <button class="search-button">Search</button>
-    </div>
-  </div>
-  <div class="content-wrapper">
-    <p class="huge-text">Get Medical Information from the touch of a button</p>
-  </div>
-  <script src="../static/js/search.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+	<title>Med-Info</title>
+	<link rel="stylesheet" href="../static/css/index.css">
+	<link rel="icon" href="../static/images/icon.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap">
+  </head>
+  <body>
+    <header class="primary-header grid">
+	  <section class="col-1-3 MIL">
+	    <img src="../static/images/logo.png" alt="Med-Info Logo">
+	  </section><!--
+	  Med-Info Logo
+	  --><section class="col-1-3 MI">
+        <h1 class="logo"><a href="index.html">Med-Info</a></h1>
+	  </section><!--
+	  Med-Info
+	  --><section class="col-1-3 login">
+	    <a class="btn btn-alt" href="login.html">Login</a>
+	  </section>
+	</header>
+	<section class="container non-hero grid">
+	  <section class="col-1-2 content-left">
+	    <h2>Malaria</h2>
+	      <p>Malaria is a life-threatening disease primarily found in tropical countries. It is both preventable and curable. However, without prompt diagnosis and effective treatment, a case of uncomplicated malaria can progress to a severe form of the disease, which is often...<a href="search.html">More Info</a></p>
+	  </section><!--
+	  Malaria
+	  --><section class ="col-1-2 pic-left">
+		<img src="../static/images/mosquito.png" alt="Mosquito">
+	  </section>
+	</section>
+	<section class="container non-hero grid">
+	  <section class ="col-1-2 pic-right">
+	    <img src="../static/images/hbp.png" alt="High Blood Pressure">
+	  </section><!--
+	  High Blood pressure
+	  --><section class="col-1-2 content-right">
+	    <h2>High Blood Pressure</h2>
+	      <p>Blood pressure refers to the force that blood exerts on the walls of the arteries as it flows through them. Ideally, a person’s diastolic blood pressure should be below 120 and their systolic blood pressure below 80. High blood pressure starts when...<a href="search.html">More Info</a></p>
+	  </section>
+	</section>
+	<section class="container non-hero grid">
+	  <section class="col-1-2 content-left">
+	    <h2>Fever</h2>
+	      <p>Viruses that can cause hyperpyrexia include enterovirus infection, roseola, rubeola, and malaria. Hyperpyrexia is associated with a body temperature of more than 106.7°F or 41.5°C. Typically, treatment for hyperpyrexia focusses on the underlying disease...<a href="search.html">More Info</a></p>
+      </section><!--
+      Fever
+       --><section class ="col-1-2 pic-left">
+         <img src="../static/images/fever.png" alt="Fever">
+       </section>
+	 </section>
+	 <section class="row">
+	  <section class="hero container">
+	    <p>Understanding our health and well-being is a cornerstone of a fulfilled life. By gaining insights into our bodies, we empower ourselves to make informed decisions, seek timely care, and embark on a proactive journey towards wellness. Exploring and comprehending medical information equips us with the knowledge needed to nurture our bodies, prioritize self-care, and live life to the fullest. Our platform is dedicated to providing you with easy access to vital health information, ensuring that you have the tools to take charge of your health journey.</p>
+	    <a class="atn atn-alt" href="login.html">Login</a>
+	  </section>
+	</section>
+	<footer class="primary-footer container group">
+	  <small>&copy; 2023 Med-Info</small>
+	</footer>
+  </body>
 </html>

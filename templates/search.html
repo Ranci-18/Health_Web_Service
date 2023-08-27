@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<title>Med-Info</title>
+	<link rel="stylesheet" href="../static/css/search.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap">
+  </head>
+  <body>
+    <header class="primary-header grid">
+	  <section class="col-1-3 MIL">
+	    <img src="../static/images/logo.png" alt="Med-Info Logo">
+	  </section><!--
+	  Med-Info Logo
+	  --><section class="col-1-3 MI">
+        <h1 class="logo"><a href="index.html">Med-Info</a></h1>
+	  </section><!--
+	  Med-Info
+	  --><section class="col-1-3 profile">
+	    <img src="../static/images/profile.png" alt="Profile">
+	  </section>
+	</header>
+	 <section class="row">
+	  <section class="hero container">
+        <p><strong>Get medical information from the click of a button!</strong></p>
+        <div class="search-bar">
+          <form action="/search" method="GET">
+            <input type="text" name="query" placeholder="Try 'Fever' ...">
+            <button type="submit">Search</button>
+          </form>
+        </div>
+	  </section>
+	</section>
+	<footer class="primary-footer container group">
+	  <small>&copy; 2023 Med-Info</small>
+	</footer>
+  </body>
+</html>
