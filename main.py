@@ -16,15 +16,7 @@ def login():
     return render_template("login.html")
 @app.route("/search")
 def search():
-    symptom = request.json.get("symptom")
-    url = f'https://health.gov/myhealthfinder/api/v3/itemlist.json?Type=topic&Keyword={symptom}'
-    response = requests.get(url)
-    data = response.json()
-
-    # Process data as needed
-    processed_data = []
-
-    return jsonify(processed_data)
+    return render_template('search.html')
 
 if __name__ == "__main__":
     app.run()
