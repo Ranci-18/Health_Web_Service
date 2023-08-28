@@ -15,11 +15,11 @@
 	  </section><!--
 	  Med-Info Logo
 	  --><section class="col-1-3 MI">
-        <h1 class="logo"><a href="index.html">Med-Info</a></h1>
+        <h1 class="logo"><a href="{{ url_for('index')}}">Med-Info</a></h1>
 	  </section><!--
 	  Med-Info
 	  --><section class="col-1-3 login">
-	    <a class="btn btn-alt" href="login.html">Login</a>
+	    <a class="btn btn-alt" href="{{ url_for('login')}}">Login</a>
 	  </section>
 	</header>
 	<section class="container non-hero grid">
@@ -55,7 +55,7 @@
 	 <section class="row">
 	  <section class="hero container">
 	    <p>Understanding our health and well-being is a cornerstone of a fulfilled life. By gaining insights into our bodies, we empower ourselves to make informed decisions, seek timely care, and embark on a proactive journey towards wellness. Exploring and comprehending medical information equips us with the knowledge needed to nurture our bodies, prioritize self-care, and live life to the fullest. Our platform is dedicated to providing you with easy access to vital health information, ensuring that you have the tools to take charge of your health journey.</p>
-	    <a class="atn atn-alt" href="login.html">Login</a>
+	    <a class="atn atn-alt" href="{{ url_for('login')}}">Login</a>
 	  </section>
 	</section>
 	<footer class="primary-footer container group">
