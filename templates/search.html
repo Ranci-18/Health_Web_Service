@@ -25,10 +25,18 @@
 	  <section class="hero container">
         <p><strong>Get medical information from the click of a button!</strong></p>
         <div class="search-bar">
-          <form action="/search" method="GET">
+          <form action="/search" method="post">
             <input type="text" name="query" placeholder="Try 'Fever' ...">
             <button type="submit">Search</button>
           </form>
+		 	<div>
+				<h2>Search Results</h2>
+				<ul>
+					{% for article in articles %}
+						<li>{{ article }}</li>
+					{% endfor %}
+				</ul>
+			</div>
         </div>
 	  </section>
 	</section>
