@@ -16,7 +16,7 @@ def search():
     symptom = request.form.get("query").lower()
     url = 'https://health.gov/myhealthfinder/api/v3/itemlist.json?Type=topic'
     articles = get_article(url, symptom)
-    return render_template("search.html", articles=articles)
+    return render_template("search.html", articles=articles) 
 
 
 if __name__ == "__main__":
