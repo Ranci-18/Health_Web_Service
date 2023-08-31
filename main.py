@@ -2,7 +2,7 @@
 """ retrieve articles and render to webpage """
 
 
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, redirect, url_for
 import requests
 
 app = Flask(__name__)
@@ -14,17 +14,21 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/login")
+@app.route("/login", methods=["POST", "GET"])
 def login():
-    """ returns user to login page """
-    return render_template("login.html")
+    """ handles user login """
+    if request.method == "POST":
+        uniqueid = request.form['uniqueid']
+        insert_user_to_db(uniqueid)
+        return redirect(url_for('search'))
+    else:
+       return render_template("login.html")
 
 
 @app.route("/search")
 def search():
-    """ returns user to search page """
+    """ returns user to login page """
     return render_template("search.html")
 
-
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
