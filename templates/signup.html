@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Med-Info</title>
-	<link rel="stylesheet" href="../static/css/login.css">
+	<link rel="stylesheet" href="../static/css/signup.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap">
 	<script src="../static/js/randomIdGenerator.js"></script>
   </head>
@@ -19,17 +19,19 @@
 	  </section>
 	</header>
     <section class="row">
+	  <section class="generate-id">
+	    <button onclick="generateUniqueId()">Generate Unique ID</button>
+	  </section>
+	  <section class="display-id">
+	    <output id="uniqueIdOutput"></output>
+  	</section>
       <section class="hero container">
 	    <div class="search-bar">
-          <form action="{{ url_for('login') }}" method="POST">
-            <input type="password" name="uniqueid" placeholder="Unique ID" required>
-            <button type="submit">Sign in</button>
+          <form action="{{ url_for('signup') }}" method="POST">
+            <input type="text" name="uniqueid" placeholder="Unique ID" required>
+            <button type="submit">Sign up</button>
           </form>
         </div>
-	    <p>No Unique ID yet? Generate one below</p>
-	  </section>
-	  <section class="hero container">
-	    <a class="atn atn-alt" href="{{ url_for('signup') }}">Signup</a>
 	  </section>
     </section>
 	<footer class="primary-footer container group">
