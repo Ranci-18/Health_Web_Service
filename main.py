@@ -25,6 +25,19 @@ def login():
        return render_template("login.html")
 
 
+@app.route("/signup", methods=["POST", "GET"])
+def signup():
+    """ Handles user login """
+    if request.method == "POST":
+        uniqueid = request.form['uniqueid']
+        if check_uniqueid_in_db(uniqueid):
+            return redirect(url_for('search'))
+        else:
+            return "Unique ID not found"
+    else:
+        return render_template("signup.html")
+
+
 @app.route("/search")
 def search():
     """ returns user to login page """
