@@ -78,30 +78,6 @@ p {
 }
 /*
   ========================================
-  Typography
-  ========================================
-*/
-
-.atn {
-  border-radius: 5px;
-  color: #648880;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 400;
-  letter-spacing: .5px;
-  margin: 0;
-  text-transform: uppercase;
-}
-.atn-alt {
-  border: 1px solid #CCCCCC;
-  padding: 10px 30px;
-}
-.atn-alt:hover {
-  background: #648880;
-  color: #fff;
-}
-/*
-  ========================================
   Home
   ========================================
 */
@@ -285,4 +261,39 @@ input:focus {
 button:hover {
   background: #648880;
   color: #fff;
+}
+/*
+  ========================================
+  Display ID
+  ========================================
+*/
+
+.generate-id button {
+  border-radius: 5px;
+  color: #648880;
+  cursor: pointer;
+  display: inline-block;
+  font: 300 17px/23px "Quicksand", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: uppercase;
+  border: 1px solid #CCCCCC;
+  padding: 15px 30px;
+  background-color: white;
+}
+.generate-id button:hover {
+  background: #648880;
+  color: #fff;
+}
+.generate-id {
+  text-align: center;
+  height: 100px;
+}
+.display-id {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
