@@ -3,6 +3,7 @@
 
 
 from flask import Flask, render_template, jsonify, request, redirect, url_for
+from app.controllers.article_controller import get_article
 import requests
 
 app = Flask(__name__)
@@ -38,10 +39,16 @@ def signup():
         return render_template("signup.html")
 
 
-@app.route("/search")
+@app.route("/search", methods=['POST', 'GET'])
 def search():
-    """ returns user to login page """
-    return render_template("search.html")
+    """ Loads search page and displays results """
+    if request.method == "POST":
+        symptom = request.form['query']
+        url = 'https://health.gov/myhealthfinder/api/v3/itemlist.json?Type=topic'
+        articles = get_article(url, symptom)
+        return render_template("search.html", articles=articles) 
+    else:
+        return render_template("search.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
