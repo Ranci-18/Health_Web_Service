@@ -25,7 +25,7 @@ if __name__ == "__main__":
     session = Session()
 
     def insert_user_to_db(uniqueid):
-    """ Create a new User instance and add to the session """
+        """ Create a new User instance and add to the session """
         try:
             new_user = User(uniqueid=uniqueid)
             session.add(new_user)
