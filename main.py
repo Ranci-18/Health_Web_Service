@@ -4,8 +4,7 @@
 
 from flask import Flask, render_template, jsonify, request, redirect, url_for
 from app.controllers.article_controller import get_article
-import requests
-from utils import validation
+from utils.validation import check_uniqueid_in_db, insert_user_to_db
 
 app = Flask(__name__)
 
