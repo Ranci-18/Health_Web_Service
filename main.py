@@ -5,6 +5,7 @@
 from flask import Flask, render_template, jsonify, request, redirect, url_for
 from app.controllers.article_controller import get_article
 import requests
+from utils import validation
 
 app = Flask(__name__)
 
