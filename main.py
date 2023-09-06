@@ -54,18 +54,18 @@ def index():
     """ returns user to index page """
     return render_template("index.html")
 
-@app.route("/login", methods=["POST", "GET"])
-def login():
+@app.route("/signup", methods=["POST", "GET"])
+def signup():
     """ handles user login """
     if request.method == "POST":
         uniqueid = request.form['uniqueid']
         insert_user_to_db(uniqueid)
-        return redirect(url_for('search'))
+        return redirect(url_for('login'))
     else:
-        return render_template("login.html")
+        return render_template("signup.html")
 
-@app.route("/signup", methods=["POST", "GET"])
-def signup():
+@app.route("/login", methods=["POST", "GET"])
+def login():
     """ Handles user login """
     if request.method == "POST":
         uniqueid = request.form['uniqueid']
