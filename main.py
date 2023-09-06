@@ -74,7 +74,7 @@ def login():
         else:
             return "Unique ID not found"
     else:
-        return render_template("signup.html")
+        return render_template("login.html")
 
 @app.route("/search", methods=['POST', 'GET'])
 def search():
