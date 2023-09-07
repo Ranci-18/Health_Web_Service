@@ -42,7 +42,13 @@
 	  </section>
 	</section>
 	<footer class="primary-footer container group">
-	  <small>&copy; 2023 Med-Info</small>
+	  <section class="col-1-2 copyright">
+	    <small>&copy; 2023 Med-Info</small>
+	  </section><!--
+	  Copyright
+	  --><section class="col-1-2 logout">
+		<a class="btn btn-alt" href="{{ url_for('logout') }}">Logout</a>
+	  </section>
 	</footer>
   </body>
 </html>
