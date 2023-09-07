@@ -2,7 +2,7 @@
 """ retrieve articles and render to webpage """
 
 
-from flask import Flask, render_template, jsonify, request, redirect, url_for, session
+from flask import Flask, render_template, jsonify, request, redirect, url_for, session, flash
 from app.controllers.article_controller import get_article
 import pymysql
 
@@ -27,7 +27,6 @@ def logged_index():
     return render_template("loggedindex.html")
 
 
-
 @app.route("/login", methods=["POST", "GET"])
 def login():
     """ handles user login """
@@ -38,14 +37,12 @@ def login():
         user = cursor.fetchone()
         cursor.close()
         if user:
-            if user:
                 # User found in the database, set the session variable to indicate logged in
                 session['logged_in'] = True
-                return redirect(url_for('logged_index'))
-            else:
-                return "Unique ID not found"
+                return redirect(url_for('search'))
         else:
-            return "Unique ID not found"
+            flash("Unique ID not found")
+            return redirect(url_for('login'))
     return render_template("login.html")
 
 
@@ -58,10 +55,11 @@ def signup():
         try:
             cursor.execute("INSERT INTO uniqueid (uniqueid) VALUES (%s)", (uniqueid,))
             db.commit()
-            return "Registration Successful"
+            return redirect(url_for('login'))
         except Exception as e:
             db.rollback()
-            return "Error: " + str(e)
+            flash("Error: " + str(e))
+            return redirect(url_for('signup'))
         finally:
             cursor.close()
     return render_template("signup.html")
@@ -70,6 +68,8 @@ def signup():
 @app.route("/search", methods=['POST', 'GET'])
 def search():
     """ Loads search page and displays results """
+    if 'logged_in' not in session or not session['logged_in']:
+        return redirect(url_for('login'))
     if request.method == "POST":
         symptom = request.form['query']
         url = 'https://health.gov/myhealthfinder/api/v3/itemlist.json?Type=topic'

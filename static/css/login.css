@@ -286,3 +286,12 @@ button:hover {
   background: #648880;
   color: #fff;
 }
+/*
+  ========================================
+  Error message
+  ========================================
+*/
+
+.flash-message {
+  color: red;
+}

@@ -33,6 +33,15 @@
             <button type="submit">Sign up</button>
           </form>
         </div>
+		{% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for message in messages %}
+                <div class="flash-message">{{ message }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
 	  </section>
     </section>
 	<footer class="primary-footer container group">

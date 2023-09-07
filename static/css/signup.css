@@ -297,3 +297,12 @@ button:hover {
   font-weight: 800;
   letter-spacing: 2px;
 }
+/*
+  ========================================
+  Error message
+  ========================================
+*/
+
+.flash-message {
+  color: red;
+}
