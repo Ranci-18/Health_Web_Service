@@ -22,7 +22,3 @@ def get_article(url, keyword):
 
     print("Article Title:", article_title)
     return articles
-
-"""if __name__ == '__main__':
-    symptom_keyword = sys.argv[1].lower()
-    get_article('https://health.gov/myhealthfinder/api/v3/itemlist.json?Type=topic')"""
