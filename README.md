@@ -40,9 +40,9 @@ Our database stores the unique IDs for the users which will be used during login
 ## Architecture
 ### Overview
 Our web app is a single-page app, coded mainly in JavaScript. Med-Info is front-end heavy where we designed the User Interface using CSS.
-![Alt text](<https://github.com/Ranci-18/Health_Web_Service/blob/main/screenshots/Screenshot%202023-09-11%142518.png>)
+![Alt text](<https://github.com/Ranci-18/Health_Web_Service/blob/main/screenshots/Screenshot%202023-09-11%20142518.png>)
 ### Data Model
-![Alt text](<https://github.com/Ranci-18/Health_Web_Service/blob/main/screenshots/Screenshot%202023-09-11%142555.png>)
+![Alt text](<https://github.com/Ranci-18/Health_Web_Service/blob/main/screenshots/Screenshot%202023-09-11%20142555.png>)
 ## Acknowledgments
 * ALX Africa Staff - For the help, advice and resources they provided us with during this project and during all our curriculum.
 * Cohort 11 and all ALX Africa students - For your friendship, invaluable support, and insight not only for this project, but over the entirety of our time in alxswe program.
