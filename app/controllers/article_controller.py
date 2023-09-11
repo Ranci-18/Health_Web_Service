@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """article retrieval and parsing moudule"""
 import requests
-# import sys
 
 
 def get_article(url, keyword):
