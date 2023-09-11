@@ -15,7 +15,7 @@ This project is our Portfolio Project, concluding our Foundations at ALX Africa.
 ## How it Works
 ### Backend & Frontend
 1. Once user is at the landing page, they can login from the top or scroll down to find login
-![Alt text](<../Health_Web_Service/screenshots/Annotation 2023-09-04 203152.png>)
+![Alt text](<https://github.com/Ranci-18/Health_Web_Service/blob/main/screenshots/Annotation%202023-09-04%20203152.png>)
 ![Alt text](<../Health_Web_Service/screenshots/Screenshot 2023-09-11 124028.png>)
 2. Login is done using a unique ID
 ![Alt text](<../Health_Web_Service/screenshots/Annotation 2023-09-04 203617.png>)
