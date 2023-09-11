@@ -15,20 +15,20 @@ This project is our Portfolio Project, concluding our Foundations at ALX Africa.
 ## How it Works
 ### Backend & Frontend
 1. Once user is at the landing page, they can login from the top or scroll down to find login
-![Alt text](<../screenshots/Annotation 2023-09-04 203152.png>)
-![Alt text](<../screenshots/Screenshot 2023-09-11 124028.png>)
+![Alt text](<../Health_Web_Service/screenshots/Annotation 2023-09-04 203152.png>)
+![Alt text](<../Health_Web_Service/screenshots/Screenshot 2023-09-11 124028.png>)
 2. Login is done using a unique ID
-![Alt text](<../screenshots/Annotation 2023-09-04 203617.png>)
+![Alt text](<../Health_Web_Service/screenshots/Annotation 2023-09-04 203617.png>)
 3. If user does not have a unique ID, they can sign up and get one randomly generated for them
-![Alt text](<../screenshots/Annotation 2023-09-04 203712.png>)
+![Alt text](<../Health_Web_Service/screenshots/Annotation 2023-09-04 203712.png>)
 4. Once they have signed up with assigned ID, they are redirected to the login page where they can now log in
 5. After log in, they are redirected to the search page
-![Alt text](<../screenshots/Screenshot 2023-09-11 124721.png>)
+![Alt text](<../Health_Web_Service/screenshots/Screenshot 2023-09-11 124721.png>)
 6. User types in the symptom they want to know about and submit
 7. The keyword is sent to the backend and received by the medical API
 8. The API filters the information and returns specific article(s)
 9. The results are sent to the frontend and displayed on the screen below the search bar
-![Alt text](<../screenshots/Screenshot 2023-09-11 124818.png>)
+![Alt text](<../Health_Web_Service/screenshots/Screenshot 2023-09-11 124818.png>)
 10. Once user is done, they can logout at the bottom of the search page or at the homepage. They can also decide to stay logged in by leaving everything as it is. Their session will be reserved
 ### Database
 Our database stores the unique IDs for the users which will be used during login. We used MySQL database and PHP as the Object Relational Mapper.
