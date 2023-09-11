@@ -40,6 +40,7 @@ Our database stores the unique IDs for the users which will be used during login
 ## Architecture
 ### Overview
 Our web app is a single-page app, coded mainly in JavaScript. Med-Info is front-end heavy where we designed the User Interface using CSS.
+
 ![Alt text](<https://github.com/Ranci-18/Health_Web_Service/blob/main/screenshots/Screenshot%202023-09-11%20142518.png>)
 ### Data Model
 ![Alt text](<https://github.com/Ranci-18/Health_Web_Service/blob/main/screenshots/Screenshot%202023-09-11%20142555.png>)
