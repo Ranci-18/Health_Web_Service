@@ -5,14 +5,13 @@ import requests
 
 def get_article(url, keyword):
     """get article from url"""
-    response = requests.get(url)
+    response = requests.get(url, timeout=10000)
     articles = []
 
     if response.status_code == 200:
-        dict = response.json()
-        lst_articles = dict['Result']['Items']['Item']
+        dic = response.json()
+        lst_articles = dic['Result']['Items']['Item']
         for article in lst_articles:
-            """print(article['Id'])"""
             print(article['Title'])
             article_title = article['Title']
             if keyword.lower() in article_title.lower():

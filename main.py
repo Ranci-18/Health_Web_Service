@@ -2,9 +2,9 @@
 """ retrieve articles and render to webpage """
 
 
-from flask import Flask, render_template, jsonify, request, redirect, url_for, session, flash
-from app.controllers.article_controller import get_article
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 import pymysql
+from app.controllers.article_controller import get_article
 
 app = Flask(__name__)
 
@@ -37,9 +37,9 @@ def login():
         user = cursor.fetchone()
         cursor.close()
         if user:
-                # User found in the database, set the session variable to indicate logged in
-                session['logged_in'] = True
-                return redirect(url_for('search'))
+            # User found in the database, set the session variable to indicate logged in
+            session['logged_in'] = True
+            return redirect(url_for('search'))
         else:
             flash("Unique ID not found")
             return redirect(url_for('login'))
@@ -74,7 +74,7 @@ def search():
         symptom = request.form['query']
         url = 'https://health.gov/myhealthfinder/api/v3/itemlist.json?Type=topic'
         articles = get_article(url, symptom)
-        return render_template("search.html", articles=articles) 
+        return render_template("search.html", articles=articles)
     else:
         return render_template("search.html")
 
